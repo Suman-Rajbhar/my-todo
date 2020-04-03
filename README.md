@@ -2,6 +2,10 @@
 Todo listing application developed using OOP PHP with MySql and JQuery
 
 ## Configuration (Database)
+
+Database Name : mytodo
+
+// Create a Table using query
 CREATE TABLE `todos` (
   `id` int(10) NOT NULL,
   `todo` varchar(200) NOT NULL,
