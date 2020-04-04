@@ -1,5 +1,5 @@
 # my-todo
-Todo listing application developed using OOP PHP with MySql and JQuery
+Todo listing application developed using OOP PHP with MySql and JQuery. This is local server optimized.
 
 ## Configuration (Database)
 
@@ -11,6 +11,8 @@ CREATE TABLE `todos` (
   `todo` varchar(200) NOT NULL,
   `active_status` tinyint(4) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+### Database connection config : dbConn.php
 
 ## User Guide
 ### 1. Insert and Save a Todo
