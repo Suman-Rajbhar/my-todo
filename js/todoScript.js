@@ -3,6 +3,9 @@ $('.todo').keypress(function(event) {
         $('.complete-todo').show();
         $('.active-todo').show();
         var tododata = $('.todo').val();
+        if(tododata == "" || tododata.trim() == ""){
+            return false;
+        }
         $.ajax({
             method: "POST",
             url: "/todo/todoController.php",
@@ -69,6 +72,10 @@ function editTodo(todo) {
 function updateTodo(todo) {
     $('.input-todo-'+todo).prop('readonly', true);
     var todoUpdate = $('.input-todo-'+todo).val();
+    if(todoUpdate == "" || todoUpdate.trim() == ""){
+        location.reload();
+        return false;
+    }
     $.ajax({
         method: "GET",
         url: "/todo/todoController.php",
